@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheIsleMapCalculator</name>
+    </assembly>
+    <members>
+        <member name="T:TheIsleMapCalculator.Enums.Map">
+            <summary>
+            Enum of available maps.
+            </summary>
+        </member>
+        <member name="T:TheIsleMapCalculator.Objects.GameLocationData">
+            <summary>
+            Class containing position data from the game.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.GameLocationData.RawX">
+            <summary>
+            The raw X value retrieved from the game input.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.GameLocationData.RawY">
+            <summary>
+            The raw Y value retrieved from the game input.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.GameLocationData.RawZ">
+            <summary>
+            The raw Z value retrieved from the game input.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.GameLocationData.X">
+            <summary>
+            Returns the raw X value divided by 1000; used for calculations.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.GameLocationData.Y">
+            <summary>
+            Returns the raw Y value divided by 1000; used for calculations.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.GameLocationData.Z">
+            <summary>
+            Returns the raw Z value divided by 1000; used for calculations.
+            </summary>
+        </member>
+        <member name="M:TheIsleMapCalculator.Objects.GameLocationData.#ctor(System.String)">
+            <summary>
+            The constructor.
+            </summary>
+            <param name="input">Raw location data from the game.</param>
+        </member>
+        <member name="T:TheIsleMapCalculator.Objects.MapData">
+            <summary>
+            Class containing map data.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.MapData.Map">
+            <summary>
+            The map that this instance is representing.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.MapData.Center">
+            <summary>
+            The center of the map.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.MapData.Size">
+            <summary>
+            The size of the map.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.MapData.Multiplier">
+            <summary>
+            The base multiplier for calculations.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.MapData.LongtitudeMoreThanZeroMultiplier">
+            <summary>
+            Multiplier that's intended to be used if the position X value is more than 0.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.Objects.MapData.LongtitudeLessThanZeroMultiplier">
+            <summary>
+            Multiplier that's intended to be used if the position X value is less than 0.
+            </summary>
+        </member>
+        <member name="M:TheIsleMapCalculator.Objects.MapData.#ctor(TheIsleMapCalculator.Enums.Map)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="map">The map that this constructor should apply to the instance.</param>
+        </member>
+        <member name="T:TheIsleMapCalculator.PositionCalculator">
+            <summary>
+            Class to calculate game map position.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.PositionCalculator.MapData">
+            <summary>
+            The map data this instance is using.
+            </summary>
+        </member>
+        <member name="P:TheIsleMapCalculator.PositionCalculator.ConversionSize">
+            <summary>
+            The conversion size this instance is using. If null, no conversion was specified.
+            </summary>
+        </member>
+        <member name="M:TheIsleMapCalculator.PositionCalculator.#ctor(TheIsleMapCalculator.Enums.Map,System.Nullable{System.Drawing.Point})">
+            <summary>
+            The constructor.
+            </summary>
+            <param name="map">The map, which this calculator is supposed to work with.</param>
+            <param name="conversionSize">The size of the map that the results should work with, all input or output will be converted to match this size. If null, no conversion will happen.</param>
+        </member>
+        <member name="M:TheIsleMapCalculator.PositionCalculator.ParseGameLocation(System.String)">
+            <summary>
+            Parses game location string to a GameLocationData object.
+            </summary>
+            <param name="gameLocation">The raw location string from the game.</param>
+            <returns>Parsed game location object.</returns>
+        </member>
+        <member name="M:TheIsleMapCalculator.PositionCalculator.CalculateGameLocation(TheIsleMapCalculator.Objects.GameLocationData)">
+            <summary>
+            Calculates game position from game location data.
+            </summary>
+            <param name="gameData">The data the calculator should use.</param>
+            <returns>Calculated (and converted, if defined) result of the position.</returns>
+        </member>
+    </members>
+</doc>

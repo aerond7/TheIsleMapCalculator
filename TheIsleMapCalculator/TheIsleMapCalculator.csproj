@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Company>aerond</Company>
+    <Authors>aerond</Authors>
+    <Description>.NET Core library to calculate and convert The Isle map position to pixel coordinates on an image of the map.</Description>
+    <Copyright>Copyright © aerond 2021</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Visual Studio 2019\Projects\TheIsleMapCalculator\TheIsleMapCalculator\TheIsleMapCalculator.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
