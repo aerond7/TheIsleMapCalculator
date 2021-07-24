@@ -45,12 +45,19 @@ namespace TheIsleMapCalculator
         /// Calculates game position from game location data.
         /// </summary>
         /// <param name="gameData">The data the calculator should use.</param>
+        /// <param name="offset">The offset with which the result should be returned. Used if you want the center of a pointer to be directly above the calculated point, should be half the size of the pointer. Null if no offset.</param>
         /// <returns>Calculated (and converted, if defined) result of the position.</returns>
-        public Point CalculateGameLocation(GameLocationData gameData)
+        public Point CalculateGameLocation(GameLocationData gameData, Point? offset = null)
         {
             // Calculate game position to location.
             float x = MapData.Center.X + gameData.X * (gameData.X < 0 ? MapData.LongtitudeLessThanZeroMultiplier : MapData.LongtitudeMoreThanZeroMultiplier);
             float y = MapData.Center.Y + gameData.Y * MapData.Multiplier;
+
+            if (offset != null)
+            {
+                x -= offset.Value.X;
+                y -= offset.Value.Y;
+            }
 
             if (ConversionSize != null)
             {
