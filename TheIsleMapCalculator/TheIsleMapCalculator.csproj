@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>net472;netstandard20</TargetFrameworks>
     <Company>aerond</Company>
     <Authors>aerond</Authors>
     <Description>.NET Core library to calculate and convert The Isle map position to pixel coordinates on an image of the map.</Description>
