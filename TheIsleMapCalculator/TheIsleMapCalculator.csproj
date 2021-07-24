@@ -4,7 +4,7 @@
     <TargetFrameworks>net472;netstandard20</TargetFrameworks>
     <Company>aerond</Company>
     <Authors>aerond</Authors>
-    <Description>.NET Core library to calculate and convert The Isle map position to pixel coordinates on an image of the map.</Description>
+    <Description>.NET library to calculate and convert The Isle map position to pixel coordinates on an image of the map.</Description>
     <Copyright>Copyright © aerond 2021</Copyright>
   </PropertyGroup>
 
