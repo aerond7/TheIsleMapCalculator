@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TheIsleMapCalculator.Enums
+﻿namespace TheIsleMapCalculator.Enums
 {
     /// <summary>
     /// Enum of available maps.

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
 using TheIsleMapCalculator.Enums;
 using TheIsleMapCalculator.Objects;
 
